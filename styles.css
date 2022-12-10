@@ -1,0 +1,675 @@
+/* Overal background*/
+
+.bckgrnd {
+    background-image: url(assets/bkground.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Header and navigation properties*/
+header {
+    background-color: #062438;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    animation-name: page_entrance;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes page_entrance {
+    0% { border-bottom-left-radius: 0; 
+        border-bottom-right-radius: 0; 
+        margin-top: -100px; 
+    }
+    30% {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    40%{
+        margin-top: 0px;
+    }
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    animation-name: appear;
+    animation-duration: 5s;
+}
+@keyframes appear {
+    0% {opacity: 0%}
+    15% {opacity: 0%;}
+}
+
+nav a {
+    max-width: 200px;
+    height: 30px;
+    border: solid gray 3px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+nav a:hover {
+    font-weight: bolder;
+    color: #062438;
+    background-color: white;
+}
+
+nav a:active {
+    background-color:  black;
+    color: white;
+}
+
+/* CV container */
+
+#whitepage {
+    padding-bottom: 70px;
+    width: 900px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    animation-name: wp_entrance;
+    animation-duration: 4s;
+}
+@keyframes wp_entrance {
+    0% {opacity: 0%;}
+    40% {opacity: 0%}
+}
+
+/* Document title. i.e, 'CURRICULUM VITAE' */
+.doc-title {
+    margin-top: 90px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #062438;
+}
+
+/* Entails the formatting of each table header*/
+.tab-header {
+    width: 80%;
+    height: 35px;
+    background-color: #062438;
+    border: #062438 solid 1px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table 1 container (Personal Details)*/
+.tab1 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border: solid 0.5px;
+    border-color: #062438;
+}
+
+/* Image container: first row element of table 1 container*/
+.image-div {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 100%;
+    height: 100%;   
+}
+/* Fills excess space in image container when screen size is reduced*/
+.filler-text {
+    height: 0px;
+    opacity: 0%;
+    background-color: gainsboro;
+    font-style: italic;
+    font-size: smaller;
+    color: #062438;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Second row element of table 1 container: Contains data fields and label cells */
+.t1flex-block { 
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    border: solid 0px;
+    justify-content:stretch;
+}
+
+/* Styles a single row in t1flex-block */
+.t1flex-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* Styles the first cell of each row */
+.t1a {
+    background-color: gainsboro;
+    color: #062438;
+    font-weight: bolder;
+    padding-left: 20px;
+    border: solid 0.5px;
+    width: 39%;
+    height: 23px;
+}
+
+/* Styles the second cell of each row*/
+.t1b {
+    padding-left: 20px;
+    border: solid 0.5px;
+    border-color: #062438;
+    width: 59%;
+    height: 23px;
+}
+
+
+/* Table 2 container - Education and training */
+.tab2 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: solid 0.5px;
+    border-color: #062438;   
+}
+
+/* Container of all the three columns of table two */
+.t2flex-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* Column 1 - 'Period'*/
+.t2c1 {
+    width: 20%;
+    border: #062438 solid 0.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Column 2 - 'Institution'*/
+.t2c2 {
+    width: 40%;
+    border: #062438 solid 0.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Column 3 - Certification*/
+.t2c3 {
+    width: 40%;
+    border: #062438 solid 0.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Table 3 - Work Experience*/
+.tab3 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: solid 0.5px;
+    border-color: #062438;   
+}
+
+/* Contains all of the columns of table 3*/
+.t3flex-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* Formats the first column of table 3 - 'Period'*/
+.t3c1 {
+    width: 20%;
+    border: #062438 solid 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formats the second column - 'Institution / Organization '*/
+.t3c2 {
+    width: 30%;
+    border: #062438 solid 0.5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formats the third column - 'Roles and Resposibilities'*/ 
+.t3c3 {
+    width: 50%;
+    border: #062438 solid 0.5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table 4 container - 'Skills'*/
+.tab4 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border: solid 0.5px;
+    border-color: #062438;   
+}
+
+/* Contains the only column of table 4*/
+.t4flex-column {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Formats each cell of t4flex-column*/
+.t4c {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: auto;
+    border: #062438 solid 1px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table 5 - 'Referees'*/
+.tab5 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    border: #062438 solid 0.5px;   
+}
+
+/* Flexes three columns in a row layout*/
+.t5flex-row {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    border: #062438 solid 0.1px;
+}
+
+/* Formats each column of table 5*/
+.t5c {
+    width: 100%;
+    height: 30px ;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border:#062438 solid 0.5px;
+}
+
+
+/* Below are all the media queries for various different screen-sizes*/
+@media screen and (max-width: 950px) {
+    #whitepage {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1061px) {
+    .t3flex-row {
+        flex-wrap: wrap;
+    }
+    .t3flex-row:first-child {
+        width: 0px;
+        height: 0px;
+        opacity: 0%;
+    }    
+    .tab3 {
+        border-right: #062438 solid 2px;
+    }
+    .t3c1 {
+        width: 100%;
+        background-color: gainsboro;
+        color: #062438;
+        font-weight: bold;
+    }
+    .t3c2 {
+        width: 37.1%;
+    }
+    .t3c3 {
+        width: 60%;
+        border-right: none;
+    }
+    .t5flex-row {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    nav a {
+        width: 100px;
+        font-size: 15px;
+    }
+    .doc-title {
+        margin-top: 50px;
+        font-size: x-large;
+    }
+    .tab-header {
+        font-size: large;
+    }
+    .t1a {
+        padding-left: 10px;
+        font-size: small;
+        height: 18px;
+    }
+
+    .t1b {
+        font-size: small;
+        padding-left: 10px;
+        height: 18px;
+    }
+    .t2c1 {
+        font-size: small;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t2c2 {
+        font-size: small;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t2c3 {
+        font-size: small;
+        padding-left: px;
+        padding-right: 10px;
+    }
+    .t3c1 {
+        width: 20%;
+        font-size: small;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t3c2 {
+        width: 30%;
+        font-size: small;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t3c3 {
+        width: 50%;
+        font-size: small;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t3flex-row {
+        flex-wrap: nowrap;
+    }
+    .t4c {
+        font-size: small;
+    }
+    .t4flex-row1 {
+        width: 60%;
+    }
+    .t4flex-row2 {
+        width: 40%;
+    }
+    .t5c {
+        font-size: small;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (max-width: 721px) {
+    .t5c:last-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #whitepage {
+        width: 95%;
+    }
+    .t1flex-block {
+        width: 100%;
+        border: solid 0.5px;
+        border-color: #062438;
+    }
+    .image-div {
+        width: 100%;
+        border: #062438 solid 0.5px;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: gainsboro;
+    }
+    img {
+        height: 70%;
+    }
+    .filler-text {
+        width: 100%;
+        height: 30%;
+        background-color: gainsboro;
+        opacity: 100%;
+    }
+    .t1flex-row {
+        flex-wrap: wrap;
+        border: #062438;
+    }
+    .t1a {
+        width: 100%;
+        background-color: gainsboro;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #062438 solid 0.1px;
+    }
+    .t1b {
+        border-top: none;
+        border-bottom: #062438 solid 3px;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+    }
+    .tab2 {
+        border-right: #062438 solid 3px;
+    }
+    .t2flex-row {
+        flex-wrap: wrap;
+    }
+    .t2flex-row:first-child {
+        width: 0px;
+        height: 0px;
+        opacity: 0%;
+    }
+    .t2c1 {
+        width: 100%;
+        background-color: gainsboro;
+        font-weight: bold;
+        color: #062438;
+    }
+    .t2c2 {
+        width: 55%;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .t2c3 {
+        width: 36%;
+        border-right: none;
+    }
+    .t3flex-row {
+        flex-wrap: wrap;
+    }
+    .t3c1 {
+        width: 100%;
+    }
+    .t3c2 {
+        width: 100%;
+        padding: 10px;
+    }
+    .t3c3 {
+        width: 100%;
+        border-right: none;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .t5c:last-child {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .t2c1 {
+        border-right: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t2c2 {
+        width: 100%;
+        border-top: none;
+        border-right: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .t2c3 {
+        width: 100%;
+        border-bottom: #062438 solid 3px;
+        border-top: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .tab2 {
+        border-left: #062438 solid 2px;
+        border-right: #062438 solid 2px;
+    }
+    .tab5 {
+        flex-wrap: wrap;
+    }
+    .t5c:first-child {
+        border-bottom: #062438 solid 3px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tab1 {
+        flex-wrap: wrap;
+    }
+    .t1flex-row {
+        flex-wrap: nowrap;
+    }
+    .t1b {
+        width: 60%;
+        margin: 0px;
+        border: #062438 solid 0.5px;
+        height: auto;
+    }
+    .t1a {
+        width: 40%;
+        margin: 0px;
+        border: #062438 solid 0.5px;
+        height: auto;
+    }
+    .image-div {
+        height: 200px;
+        background-color: gainsboro;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    img {
+        height: 90%;
+    }
+    .filler-text {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    nav a {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .doc-title {
+        font-size:large;   
+    }
+    .t1flex-row {
+        flex-wrap: nowrap;
+    }
+    .t1a {
+        width: 100%;
+    }
+    .t1b {
+        width: 100%;
+    }
+}
